@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>trabalho git</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="css/estilo.css"/>
+</head>
+<body>
+<div id="conteiner">
+<h1>Gestão de configuração</h1>
+
+<p>Nesta seção serão apresentados os processos de gestão de configuração do projeto.</p>
+
+<h3>Responsabilidades</h3>
+
+<span color="red">atualizar</span>
+
+<p>A gerência de configuração é atividade exercida por três papéis, cujas responsabilidades são descritas na tabela abaixo.</p>
+
+<p>Papel<br>
+Responsabilidades<br>
+Gerente de configuração ou integrador de configuração<br>
+i. elaborar e ajustar este documento;<br>
+i. elaborar e ajustar este documento;<br>
+ii. controlar as baselines dos produtos;<br>
+iii. realizar a integração (merge) junto às equipes de desenvolvimento;<br>
+iv. realizar auditorias para garantir o cumprimento das atividades de gerenciamento de configuração pelas equipes de trabalho;<br>
+v. informar o status da configuração;<br>
+vi. definir permissões de acesso aos repositórios;<br>
+vii. gerar tags;<br>
+viii. gerar branchs;<br>
+ix. gerar builds;<br>
+x. gerar releases
+desenvolvedor 	i. respeitar as definições deste documento quando da elaboração ou modificação dos artefatos afetados pela gerência de configuração (itens de configuração) a ele atribuídos;<br>
+ii. realizar a integração (merge) com a gerência de configuração;<br>
+iii. gerar builds a pedido da gerência de configuração;<br>
+iv. gerar releases a pedido da gerência de configuração
+Analista de sistema 	i. respeitar as definições deste documento quando da elaboração ou modificação dos artefatos afetados pela gerência de configuração (itens de configuração) a ele atribuídos.
+</p>
+
+<h3>Versionamento</h3>
+
+<p>Os documentos relacionados ao projeto PJe são mantidos nesta wiki, no testlink e no Redmine. O versionamento adotado para os documentos será o disponível nas ferramentas citadas. Os códigos fontes, assim como artefatos de banco de dados, são mantidos no GIT. Seguem direcionamentos a respeito do versionamento dos artefatos.
+Regras de Versionamento</p>
+
+<p>O esquema de numeração de versões adotado pelo CNJ é baseado no esquema adotado pela organização Apache Foundation. O esquema define que uma versão é composta por quatro números inteiros, MAJOR.MINOR.MICRO.PATCH onde:
+</p>
+
+<h3>MAJOR</h3>
+<p>Número principal da versão, somente alterado quando:
+a)há modificação de arquitetura do sistema, ainda que não tenha havido modificação da estrutura de dados;
+b)há modificação da estrutura de dados que demanda uma migração significativa de uma base para outra base de dados, não sendo suficiente a mera concretização de scripts de migração de dados entre tabelas de um mesmo banco de dados.
+Esse número deve ser 0 para a versão anterior à primeira.
+</p>
+
+<h3>MINOR</h3>
+<p>Número menor de versão, modificado sempre que houver inclusão de um ou mais conjuntos de novas funcionalidades. Esse número deve iniciar em 0 e deve ser reiniciado quando da troca do número principal.</p>
+
+<h3>MICRO</h3>
+<p>Número micro de versão, modificado sempre que liberada uma versão de correção de erros ou de comportamento esperado na versão do sistema. Esse número deve iniciar em 0 e deve ser reiniciado quando da troca do número intermediário ou do número principal. Para versões intermediárias ou principais novas, antes da homologação, esse número deverá ser acrescido do milestone de liberação (M1, M2, M3 etc.) até que a versão seja homologada, quando receberá o número menor.</p>
+
+<h3>PATCH</h3>
+<p>Número de correção de versão, modificado sempre que liberada uma versão de correção de erros críticos do sistema.
+</p>
+
+<p>A Figura 5.1-1 apresenta em detalhes como o processo ocorre. O repositório possui dois branches principais: o master, que recebe todas as modificações planejadas para a próxima versão, e o stable, que representa a versão atual em produção.
+Quando a nova versão está prestes a ser lançada, é realizado um merge entre os branches master e stable. Neste mesmo momento, um branch para a versão atual é criado e mantido até que a nova versão estável esteja pronta para produção. Logo após o merge, inicia-se o período de estabilização da nova versão com o objetivo de corrigir eventuais bugs introduzidos pelas novas funcionalidades. Uma vez estável, uma tag é marcada e a versão está pronta para ser usada em produção e, após o lançamento da versão, inicia-se o ciclo de manutenção.
+FIGURA 5.1-1
+<img src="img1.jpg" width="700px" height="300px" />
+
+    <h3>Nomes das versões do sistema</h3>
+
+    <p>As versões intermediárias do sistema receberão o nome de município brasileiro iniciado na letra de referência da versão, estas na ordem alfabética, que não contenha espaços ou caracteres especiais, obtidos a partir do nome das unidades federativas, essas na ordem alfabética inversa. Assim, por exemplo, temos:</p>
+    Versão 	Letra de referência 	Unidade Federativa 	Município existente na letra de referência<br>
+    1.0 	A 	Tocantins 	Alvorada<br>
+    1.1 	B 	Sergipe 	Balbinos<br>
+    1.2 	C 	São Paulo 	Capela<br>
+    1.4 	D 	Santa Catarina 	Descanso<br>
+    2.0 	E 	Roraima 	Esmeralda<br>
+    Versões de bibliotecas ou projetos utilitários do sistema<br>
+
+<p>As bibliotecas ou projetos utilitários do sistema receberão sua numeração seguindo as seguintes regras:</p>
+
+X.Y.Z<br><br>
+
+<p>, onde:<br>
+X &nbsp &nbsp &nbsp &nbsp Número principal da versão, a ser alterada quando:a) opcionalmente, os desenvolvedores incluíram na versão substanciais alterações que melhoram as funcionalidades existentes; b) obrigatoriamente, quando a nova versão não é compatível, em nível de interface, com a versão de produção atual. A compatibilidade em nível de interface existe quando, substituída uma versão por outra em um projeto que somente faz uso das interfaces públicas da biblioteca, não há erro de compilação. Esse número deve ser 0 para a versão anterior à primeira.<br>
+Y &nbsp &nbsp &nbsp &nbsp 	Número intermediário de versão, a ser alterado quando há acréscimos de funcionalidades em relação à versão anterior e não foi mantida a compatibilidade em nível de interface. Esse número deve iniciar em 0 e reiniciado quando da troca do número principal.,<br>
+Z &nbsp &nbsp &nbsp &nbsp Número menor de versão, modificado sempre que liberada versão de correção de erros ou de comportamento esperado na versão do sistema. Esse número deve iniciar em 0 e reiniciado quando da troca do número intermediário ou do número principal. Para versões intermediárias ou principais novas, antes da homologação, esse número deverá ser acrescido do milestone de liberação (M1, M2, M3 etc.) até que a versão seja homologada, quando receberá o número menor.
+Versões de banco de dados
+</p>
+
+<p>Os dumps de bancos de dados seguirão a nomenclatura da versão a que estão vinculadas, acrescido de descritor de seu conteúdo, quando necessário.</p>
+
+<H4>Exemplos:</H4>
+
+<ul>
+  <li> pjedb_1.0.1_treinamento.backup</li>
+    <li>pjedb_1.0.1_treinamentobin.backup</li>
+    <li>pjedb_1.0.1_limpa.backup</li>
+    <li>pjedb_1.0.1_limpabin.backup</li>
+    <li>pjedb_1.2.0_limpa.backup</li>
+</ul>
+
+<p>No caso de scripts de bancos de dados, deverá ser seguida a seguinte regra de nomenclatura:
+<ul>
+<li>pjescript_importacao_<,versaodestino,>_<,descricao>.sql</li>
+<li>pjescript_conversao_<,vorigem>-<,vdestino>_descricao.sql</li>
+</ul>
+,onde a descrição é opcional.</p>
+
+<p>Exemplos: • pjescript_importacao_1.0.1_cep.sql • pjescript_conversao_1.0.1-1.0.1.sql • pjescript_importacao_1.0.1_cnae.sql
+        Repositórios distribuídos</p>
+
+        <p>O GIT tem sido amplamente adotado em projetos de código e desenvolvimento abertos por permitir a coordenação de várias equipes de desenvolvimento de forma simples e transparente.
+        A Figura 5.2-1 apresenta uma organização de repositórios distribuídos com três papéis distintos. A disposição é formada por um repositório central (CNJ Abençoado), sob responsabilidade dos líderes do projeto, e repositórios locais para cada equipe participante do desenvolvimento.
+        Cada um dos repositórios locais tem uma equipe formada por desenvolvedores, revisores de código e um ou mais gestores. O processo de desenvolvimento estende fluxo definido em Fluxo de trabalho, acrescentando os seguintes passos:
+
+        Os desenvolvedores resolvem issues e submetem as alterações nos repositórios locais através de branches específicos e solicitações de merge
+        Os revisores testam e aprovam as solicitações, reintegrando os branches ao master
+        Uma vez revisado, testado e aprovado, o gestor do repositório local submete a alteração para o repositório central e aguarda aprovação dos gestores do projeto.
+
+        Essa disposição traz duas vantagens em relação aos SCVs centralizados: (i) as equipes de locais de desenvolvimento têm total liberdade de organização; (ii) os líderes do projeto possuem total controle sobre o código submetido.
+        FIGURA 5.2-1</p>
+
+<img src="img2.jpg"/>
+
+<h3>Política de acesso</h3>
+
+<h4>atualizar</h4>
+
+<p>O PJe encerra um desenvolvimento colaborativo intenso que envolve múltiplas fábricas de software e analistas de sistemas, muitas vezes não localizados no mesmo ponto geográfico brasileiro. Em razão disso e da intensa necessidade de controle do código fonte com vistas a evitar um desenvolvimento não controlado, o acesso aos artefatos do sistema deve ser bem controlado.
+Deve-se identificar esses acessos segundo os seguintes papéis:
+Papel 	Sigla 	Descrição
+Membro do CG 	CG 	Magistrado membro do comitê gestor nacional.
+Gerente geral 	GG 	Servidor diretamente ligado ao CNJ que gerencia o projeto.
+Gerente de configuração 	GC 	Servidor diretamente ligado ao CNJ que procura assegurar o respeito ao plano de gerência de configuração.
+Gerente de desenvolvimento 	GD 	Servidor diretamente ligado ao CNJ que lidera o desenvolvimento do sistema, assegurando que os desenvolvedores respeitem as regras de configuração, de desenvolvimento e os requisitos especificados.
+Gerente de qualidade 	GQ 	Servidor diretamente ligado ao CNJ que lidera as atividades de testes e homologação de uma versão do sistema.
+Analista de requisitos 	AR 	Pessoa, servidor ou não, responsável por receber, analisar e formalizar os requisitos de uma determinada funcionalidade do sistema.
+Analista de bancos de dados 	ABD 	Servidor responsável por avaliar a estrutura de bancos de dados do sistema, com vistas a assegurar sua otimização quando necessário.
+Desenvolvedor 	DES 	Pessoa, servidor ou não, responsável por implementar um determinado requisito ou caso de uso no sistema.
+Membro de grupo de requisitos 	ER 	Servidor especialista em um determinado tópico que dará insumos para a preparação dos requisitos e dos casos de uso pertinentes.
+Fábrica 	FAB 	Tribunal ou terceiro contratado responsável por desenvolver uma determinada funcionalidade ou manter um determinado branch. Cabendo a ela realizar os commits na periodicidade definida neste documento respeitadas as regras estabelecidas de desenvolvimento e qualidade.</p>
+
+<p>Tomando por base tais papéis, os acessos devem ser concedidos seguindo a seguinte tabela:
+Recurso 	CG 	GG 	GC 	GD 	GQ 	AR 	ABD 	DES 	ER 	FAB<br/>
+Redmine 	L 	LG 	LG 	LG 	LG 	L 	L 	L 	L 	L<br/>
+/aplicacao 	- 	L 	L 	LG 	L 	L 	L 	LG 	- 	LG*<br/>
+wikipje - gerência 	L 	L 	LG 	L 	L 	LG 	L 	L 	L 	LG*<br/>
+wikipje - casos de uso 	L 	L 	LG 	L 	LG 	LG 	L 	L 	L 	LG*<br/>
+wikipje - configuração 	L 	LG 	LG 	L 	LG 	L 	L 	L 	L 	L<br/>
+wikipje - regrasdenegocio 	L 	L 	LG 	L 	LG 	LG 	L 	L 	L 	LG*<br/>
+wikipje - requisitos 	L 	L 	LG 	L 	LG 	LG 	L 	L 	L 	LG*<br/>
+/aplicacao/bancodedados/* 	L 	L 	LG 	LG 	L 	L 	LG 	L 	L 	LG*<br/>
+testlink 	L 	LG 	LG 	L 	LG 	LG 	L 	L 	L 	LG*
+</p>
+
+<p>, onde:<br/>
+
+L = leitura<br/>
+LG = leitura e gravação<br/>
+LG* = leitura e gravação limitadas ao branch afetado a essa fábrica, ou no trunk, se atuando no trunk, devendo ela assegurar que os papéis correspondentes internos, nesses casos, respeitem iguais regras de permissão.</p>
+
+<HR size="2" >
+
+<h1>Sistemas de controle de versão</h1>
+
+<p>Softwares de controle de versão são sistemas que registram as alterações em um conjunto de arquivos ao longo do tempo de modo a permitir a recuperação de versões específicas quando necessário.
+Além de registrar as alterações de um conjunto de arquivos, os sistema de controle de versão podem conter outras funcionalidades e são divididos em três categorias principais:
+Sistemas de controle de versão local</p>
+
+<p>O método mais utilizado pelos usuários para controle de versão é copiar os arquivos em outro diretório. Esta abordagem é comum devido a sua simplicidade, mas também muito suscetível a erros. É fácil esquecer em que diretório está e acabar removendo ou sobrescrevendo o arquivo errado. Para resolver estes problemas, os programadores desenvolveram Sistemas de Controle de Versão (SCV) locais que possuem um simples banco de dados contendo todas as alterações dos arquivos, conforme a Figura 3.1-1:</p>
+
+<img src="img3.jpg"/>
+
+<p>Um dos sistemas de controle de versão mais populares é o rcs, incluso em várias distribuições Linux e no sistema operacional Mac OSX. Essa ferramenta funciona basicamente mantendo conjuntos de mudanças em um formato especial no disco. Dessa forma, o sistema permite a recriação de qualquer arquivo em qualquer momento aplicando as mudanças registradas.</p>
+
+<h3>Sistemas de controle de versão centralizado</h3>
+
+<p>Quando existe a necessidade de colaboração de um grupo de pessoas sobre um conjunto de arquivos, os SCV locais passam a não atender. Para resolver esse problema, sistemas de controle de versão centralizados (SCVC) foram desenvolvidos. Tais sistemas, como CVS, SVN e Perforce, têm um único servidor que contém todos os arquivos versionados e um número de usuários que realizam checkout (isto é, copiam a última versão do arquivo) de um local central (Figura 3.2-1).</p>
+
+<img src="img4.jpg"/>
+
+<p>Essa configuração oferece uma séria de vantagens, especialmente sobre os SCV locais. Por exemplo, todos os usuários sabem, até certo ponto, o que outros usuários do mesmo projeto estão fazendo. Os administradores possuem um controle refinado sobre quem pode fazer o quê, o que torna a administração destes repositórios muito mais simples do que lidar com bancos de dados locais em cada cliente. No entanto, esta mesma configuração também tem algumas desvantagens sérias. O mais óbvio é o único ponto de falha que o servidor centralizado representa. Se esse servidor cair por uma hora, durante aquela hora ninguém poderá colaborar ou até mesmo salvar as alterações realizadas nos arquivos em que estavam trabalhando. Se o disco rígido do servidor central for corrompido, e nenhum backup tenha sido realizado, todos os dados guardados serão perdidos – todo o histórico do projeto, exceto alguns arquivos que estiverem guardados nos computadores clientes. SCV locais sofrem do mesmo problema – sempre que o histórico for guardado em um único lugar, corre-se o risco de perder tudo.</p>
+
+<h3>Sistemas de controle de versão distribuído</h3>
+
+<p>É no problema do único ponto de falha que os Sistemas de Controle de Versão Distribuídos entram em cena. Em tais sistemas como Git, Mercurial, Bazaar ou Dracs, os clientes possuem um espelho completo do conteúdo do servidor, em vez de uma única versão do arquivo. Assim, se o servidor ficar corrompido, qualquer usuário do sistema pode restaurar completamente o histórico de modificações do projeto, evitando que os dados sejam perdidos. Nesses sistemas, cada checkout é uma cópia completa do conteúdo do servidor. (Figura 3.3-1)</p>
+
+<img src="img5.jpg">
+
+<p>Além disso, esses sistemas lidam muito bem com colaboração de vários grupos de trabalhos no mesmo projeto. Essa característica permite o desenvolvimento de vários fluxos de trabalho que não são possíveis em sistemas centralizados, como modelos hierárquicos.</p>
+
+<h3>Versionamento com o GIT</h3>
+
+<p>Nesta Seção serão apresentados os conhecimentos básicos sobre ferramenta GIT tais como detalhes de funcionamento, comandos, fluxo de trabalho e ferramentas de apoio.</p>
+</div>
+</body>
+
+</html>

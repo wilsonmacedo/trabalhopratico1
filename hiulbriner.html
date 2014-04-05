@@ -123,6 +123,37 @@ Versões de banco de dados
 
 <img src="img2.jpg"/>
 
+<h3>Política de acesso</h3>
+
+<h4>atualizar</h4>
+
+<p>O PJe encerra um desenvolvimento colaborativo intenso que envolve múltiplas fábricas de software e analistas de sistemas, muitas vezes não localizados no mesmo ponto geográfico brasileiro. Em razão disso e da intensa necessidade de controle do código fonte com vistas a evitar um desenvolvimento não controlado, o acesso aos artefatos do sistema deve ser bem controlado.
+Deve-se identificar esses acessos segundo os seguintes papéis:
+Papel 	Sigla 	Descrição
+Membro do CG 	CG 	Magistrado membro do comitê gestor nacional.
+Gerente geral 	GG 	Servidor diretamente ligado ao CNJ que gerencia o projeto.
+Gerente de configuração 	GC 	Servidor diretamente ligado ao CNJ que procura assegurar o respeito ao plano de gerência de configuração.
+Gerente de desenvolvimento 	GD 	Servidor diretamente ligado ao CNJ que lidera o desenvolvimento do sistema, assegurando que os desenvolvedores respeitem as regras de configuração, de desenvolvimento e os requisitos especificados.
+Gerente de qualidade 	GQ 	Servidor diretamente ligado ao CNJ que lidera as atividades de testes e homologação de uma versão do sistema.
+Analista de requisitos 	AR 	Pessoa, servidor ou não, responsável por receber, analisar e formalizar os requisitos de uma determinada funcionalidade do sistema.
+Analista de bancos de dados 	ABD 	Servidor responsável por avaliar a estrutura de bancos de dados do sistema, com vistas a assegurar sua otimização quando necessário.
+Desenvolvedor 	DES 	Pessoa, servidor ou não, responsável por implementar um determinado requisito ou caso de uso no sistema.
+Membro de grupo de requisitos 	ER 	Servidor especialista em um determinado tópico que dará insumos para a preparação dos requisitos e dos casos de uso pertinentes.
+Fábrica 	FAB 	Tribunal ou terceiro contratado responsável por desenvolver uma determinada funcionalidade ou manter um determinado branch. Cabendo a ela realizar os commits na periodicidade definida neste documento respeitadas as regras estabelecidas de desenvolvimento e qualidade.</p>
+
+Tomando por base tais papéis, os acessos devem ser concedidos seguindo a seguinte tabela:
+Recurso 	CG 	GG 	GC 	GD 	GQ 	AR 	ABD 	DES 	ER 	FAB
+Redmine 	L 	LG 	LG 	LG 	LG 	L 	L 	L 	L 	L
+/aplicacao 	- 	L 	L 	LG 	L 	L 	L 	LG 	- 	LG*
+wikipje - gerência 	L 	L 	LG 	L 	L 	LG 	L 	L 	L 	LG*
+wikipje - casos de uso 	L 	L 	LG 	L 	LG 	LG 	L 	L 	L 	LG*
+wikipje - configuração 	L 	LG 	LG 	L 	LG 	L 	L 	L 	L 	L
+wikipje - regrasdenegocio 	L 	L 	LG 	L 	LG 	LG 	L 	L 	L 	LG*
+wikipje - requisitos 	L 	L 	LG 	L 	LG 	LG 	L 	L 	L 	LG*
+/aplicacao/bancodedados/* 	L 	L 	LG 	LG 	L 	L 	LG 	L 	L 	LG*
+testlink 	L 	LG 	LG 	L 	LG 	LG 	L 	L 	L 	LG*
+
+
 
 
 

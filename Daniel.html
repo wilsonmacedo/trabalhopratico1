@@ -39,11 +39,13 @@ trabalhar em alguma coisa ainda com o comando stash, e você pode reescrever com
 de outra maneira. Isso pode envolver mudar a ordem dos commits, alterar mensagens ou arquivos em um commit,
 juntar ou separar commits, ou remover commits completamente — tudo isso antes de compartilhar seu trabalho com os outros.</P>
 <p>Nesta seção, você verá como realizar essas tarefas muito úteis de modo que você pode fazer seu histórico de commits parecer da forma que você quiser antes de compartilhá-lo com outros.
-Modificar o último commit é provavelmente a alteração de histórico mais comum que você irá fazer. Muitas vezes você vai querer fazer duas coisas básicas com seu último commit: mudar a mensagem do commit, ou mudar o snapshot que você acabou de salvar, adicionando, alterando e removendo arquivos.
+Modificar o último commit é provavelmente a alteração de histórico mais comum que você irá fazer. Muitas vezes você vai querer fazer duas coisas básicas com seu último commit: 
+mudar a mensagem do commit, ou mudar o snapshot que você acabou de salvar, adicionando, alterando e removendo arquivos.
 Se você quer somente modificar a mensagem do seu último commit, é muito simples:
 $ git commit --amend</p>
 <p>Isso abre seu editor de texto, com sua última mensagem de commit nele, pronto para você modificar a mensagem. Quando você salva e fecha o editor, ele salva um novo commit contendo essa mensagem e 
-fazendo esse seu novo commit o mais recente. Se você fez o commit e quer alterar o snapshot adicionando ou modificando arquivos, possivelmente porque você esqueceu de adicionar um arquivo novo quando fez o commit original, o processo funciona basicamente da mesma maneira. 
+fazendo esse seu novo commit o mais recente. Se você fez o commit e quer alterar o snapshot adicionando ou modificando arquivos,
+ possivelmente porque você esqueceu de adicionar um arquivo novo quando fez o commit original, o processo funciona basicamente da mesma maneira. 
 Você adiciona as alterações que deseja na área de seleção editando um arquivo e executando git add nele ou git rm em um arquivo rastreado, e depois git commit --amend pega sua área de seleção atual e faz o snapshot para o novo commit. Você precisa ter cuidado com essa técnica porque isso muda o SHA-1 do commit.
  É como um rebase muito pequeno — não altere seu último commit se você já fez o push dele.</p>
 

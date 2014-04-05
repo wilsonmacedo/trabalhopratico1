@@ -26,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hiulbriner.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hiulbriner.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hiulbriner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="6" selection-start="16032" selection-end="16032" vertical-scroll-proportion="0.74626863" vertical-offset="4122" max-vertical-offset="4675">
+            <state line="8" column="18" selection-start="182" selection-end="182" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="4675">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="estilo.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="estilo.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/estilo.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="1" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+            <state line="4" column="23" selection-start="102" selection-end="102" vertical-scroll-proportion="0.12099644" vertical-offset="0" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -62,8 +62,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/css/estilo.css" />
         <option value="$PROJECT_DIR$/hiulbriner.html" />
+        <option value="$PROJECT_DIR$/css/estilo.css" />
       </list>
     </option>
   </component>
@@ -186,16 +186,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/estilo.css">
+    <entry file="file://$PROJECT_DIR$/hiulbriner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+        <state line="8" column="18" selection-start="182" selection-end="182" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="4675">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hiulbriner.html">
+    <entry file="file://$PROJECT_DIR$/css/estilo.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="6" selection-start="16032" selection-end="16032" vertical-scroll-proportion="0.74626863" vertical-offset="4122" max-vertical-offset="4675">
+        <state line="4" column="23" selection-start="102" selection-end="102" vertical-scroll-proportion="0.12099644" vertical-offset="0" max-vertical-offset="578">
           <folding />
         </state>
       </provider>

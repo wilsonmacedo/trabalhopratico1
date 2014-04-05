@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61cc9fd4-fd8c-4fec-a809-029447259981" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/estilo.css" afterPath="$PROJECT_DIR$/css/estilo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hiulbriner.html" afterPath="$PROJECT_DIR$/hiulbriner.html" />
     </list>
     <ignored path="trabalhopratico1.iws" />
@@ -28,7 +29,16 @@
       <file leaf-file-name="hiulbriner.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hiulbriner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="2" selection-start="15784" selection-end="15784" vertical-scroll-proportion="0.8097015" vertical-offset="4020" max-vertical-offset="4624">
+            <state line="197" column="6" selection-start="16032" selection-end="16032" vertical-scroll-proportion="0.74626863" vertical-offset="4122" max-vertical-offset="4675">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estilo.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/estilo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="1" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
               <folding />
             </state>
           </provider>
@@ -52,6 +62,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/css/estilo.css" />
         <option value="$PROJECT_DIR$/hiulbriner.html" />
       </list>
     </option>
@@ -102,6 +113,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="trabalhopratico1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trabalhopratico1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trabalhopratico1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -161,9 +186,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="1" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hiulbriner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="2" selection-start="15784" selection-end="15784" vertical-scroll-proportion="0.8097015" vertical-offset="4020" max-vertical-offset="4624">
+        <state line="197" column="6" selection-start="16032" selection-end="16032" vertical-scroll-proportion="0.74626863" vertical-offset="4122" max-vertical-offset="4675">
           <folding />
         </state>
       </provider>

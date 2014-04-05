@@ -44,12 +44,30 @@ Regras de Versionamento</p>
 <p>O esquema de numeração de versões adotado pelo CNJ é baseado no esquema adotado pela organização Apache Foundation. O esquema define que uma versão é composta por quatro números inteiros, MAJOR.MINOR.MICRO.PATCH onde:
 </p>
 
-<h3>MAJOR<h3>
+<h3>MAJOR</h3>
 <p>Número principal da versão, somente alterado quando:
 a)há modificação de arquitetura do sistema, ainda que não tenha havido modificação da estrutura de dados;
 b)há modificação da estrutura de dados que demanda uma migração significativa de uma base para outra base de dados, não sendo suficiente a mera concretização de scripts de migração de dados entre tabelas de um mesmo banco de dados.
 Esse número deve ser 0 para a versão anterior à primeira.
 </p>
+
+<h3>MINOR</h3>
+<p>Número menor de versão, modificado sempre que houver inclusão de um ou mais conjuntos de novas funcionalidades. Esse número deve iniciar em 0 e deve ser reiniciado quando da troca do número principal.</p>
+
+<h3>MICRO</h3>
+<p>Número micro de versão, modificado sempre que liberada uma versão de correção de erros ou de comportamento esperado na versão do sistema. Esse número deve iniciar em 0 e deve ser reiniciado quando da troca do número intermediário ou do número principal. Para versões intermediárias ou principais novas, antes da homologação, esse número deverá ser acrescido do milestone de liberação (M1, M2, M3 etc.) até que a versão seja homologada, quando receberá o número menor.</p>
+
+<h3>PATCH</h3>
+<p>Número de correção de versão, modificado sempre que liberada uma versão de correção de erros críticos do sistema.
+</p>
+
+<p>A Figura 5.1-1 apresenta em detalhes como o processo ocorre. O repositório possui dois branches principais: o master, que recebe todas as modificações planejadas para a próxima versão, e o stable, que representa a versão atual em produção.
+Quando a nova versão está prestes a ser lançada, é realizado um merge entre os branches master e stable. Neste mesmo momento, um branch para a versão atual é criado e mantido até que a nova versão estável esteja pronta para produção. Logo após o merge, inicia-se o período de estabilização da nova versão com o objetivo de corrigir eventuais bugs introduzidos pelas novas funcionalidades. Uma vez estável, uma tag é marcada e a versão está pronta para ser usada em produção e, após o lançamento da versão, inicia-se o ciclo de manutenção.
+FIGURA 5.1-1
+</p>
+
+
+
 
 </body>
 

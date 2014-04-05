@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	<meta charset="UTF-8"/>
+	<title> Git (história, criadores, principais funcionalidades e comandos) </title>
+	</head>
+	<body>
+	<h1> <p ALIGN="CENTER"> Git (história, criadores, principais funcionalidades e comandos) </p> </h1>
+	<font size="4">
+	
+	
+
+<p>Assim como muitas coisas boas na vida, o Git começou com um tanto de destruição criativa e controvérsia acirrada. 
+O kernel (núcleo) do Linux é um projeto de software de código aberto de escopo razoavelmente grande. </p>
+Durante a maior parte do período de manutenção do kernel do Linux (1991-2002), as mudanças no software eram repassadas como patches e arquivos compactados.
+<p>Em 2002, o projeto do kernel do Linux começou a usar um sistema DVCS proprietário chamado BitKeeper.
+Em 2005, o relacionamento entre a comunidade que desenvolvia o kernel e a empresa que desenvolvia comercialmente o BitKeeper se 
+desfez, e o status de isento-de-pagamento da ferramenta foi revogado.</p> 
+<p>Isso levou a comunidade de desenvolvedores do Linux (em particular Linus Torvalds, o criador do Linux) a 
+desenvolver sua própria ferramenta baseada nas lições que eles aprenderam ao usar o BitKeeper. 
+Alguns dos objetivos do novo sistema eram:</p>
+<p>•	Velocidade</P>
+<p>•	Design simples</P>
+<p>•	Suporte robusto a desenvolvimento não linear (milhares de branches paralelos)</P>
+<p>•	Totalmente distribuído</P>
+<p>•	Capaz de lidar eficientemente com grandes projetos como o kernel do Linux (velocidade e volume de dados)
+Desde sua concepção em 2005, o Git evoluiu e amadureceu a ponto de ser um sistema fácil de usar e ainda assim mantém essas qualidades iniciais. 
+<p>É incrivelmente rápido, bastante eficiente com grandes projetos e possui um sistema impressionante de branching para desenvolvimento não-linear.</p>
+<p>O Git é um sistema de controle de versão (ou versionamento), VCS (do inglês version control system) ou ainda SCM (do inglês source code management) 
+distribuído que está sendo cada vez mais usado, pois foca em velocidade e robustez. O desenvolvedor inicial do Git foi Linus Torvalds (criador do Linux).</p>
+<p>Um sistema de controle de versão tem a finalidade de gerenciar as diferentes versões de um documento. É muito utilizado por empresas de desenvolvimento de software que possuem grandes equipes e
+precisam manter organizado, documentado e arquivado tudo o que foi e está sendo implementado no software.</P>
+<p>Como exemplo de projetos que utilizam o Git temos: Arch Linux, Android, Debian, Digg, Eclipse, Fedora, GNOME, jQuery, openSUSE, Ruby on Rails, Samba, Yahoo UI Library, entre outros.
+Muitas vezes, trabalhando com o Git, você pode querer revisar seu histórico de commits por alguma razão.</P>
+<p>Uma das melhores funcionalidades do Git é que ele permite você tomar decisões no último momento possível. 
+Você pode decidir quais arquivos vai em qual commit um pouco antes de fazer o commit da área de seleção, você pode decidir que não quer 
+trabalhar em alguma coisa ainda com o comando stash, e você pode reescrever commits que já aconteceram para que eles pareçam ter acontecido 
+de outra maneira. Isso pode envolver mudar a ordem dos commits, alterar mensagens ou arquivos em um commit,
+juntar ou separar commits, ou remover commits completamente — tudo isso antes de compartilhar seu trabalho com os outros.</P>
+<p>Nesta seção, você verá como realizar essas tarefas muito úteis de modo que você pode fazer seu histórico de commits parecer da forma que você quiser antes de compartilhá-lo com outros.
+Modificar o último commit é provavelmente a alteração de histórico mais comum que você irá fazer. Muitas vezes você vai querer fazer duas coisas básicas com seu último commit: mudar a mensagem do commit, ou mudar o snapshot que você acabou de salvar, adicionando, alterando e removendo arquivos.
+Se você quer somente modificar a mensagem do seu último commit, é muito simples:
+$ git commit --amend</p>
+<p>Isso abre seu editor de texto, com sua última mensagem de commit nele, pronto para você modificar a mensagem. Quando você salva e fecha o editor, ele salva um novo commit contendo essa mensagem e 
+fazendo esse seu novo commit o mais recente. Se você fez o commit e quer alterar o snapshot adicionando ou modificando arquivos, possivelmente porque você esqueceu de adicionar um arquivo novo quando fez o commit original, o processo funciona basicamente da mesma maneira. 
+Você adiciona as alterações que deseja na área de seleção editando um arquivo e executando git add nele ou git rm em um arquivo rastreado, e depois git commit --amend pega sua área de seleção atual e faz o snapshot para o novo commit. Você precisa ter cuidado com essa técnica porque isso muda o SHA-1 do commit.
+ É como um rebase muito pequeno — não altere seu último commit se você já fez o push dele.</p>
+
+
+	
+	
+	
+	
+	
+	
+	</body>
+
+
+</html>
+
+
+
+
+
+

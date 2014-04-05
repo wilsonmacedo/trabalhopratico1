@@ -50,5 +50,107 @@ conhecido como impressionantes l&oacute;gicos) desenvolvedores Chris Wanstrath, 
 
 <p>GitHub, Inc. foi fundada em 2008 e est&aacute; sediada em San Francisco, Calif&oacute;rnia. </p>
 
+
+
+<h4><P ALIGN="CENTER">Criando um reposit&oacute;rio</P></h4>
+
+<p>Para criar um reposit&oacute;rio no GitHub, clique no bot&aring;o New repository dispon&iacute;vel na sua p&aacute;gina 
+inicial,especifique um nome e opcionalmente uma descri&ccedil;&atilde;o. </p>
+<p>Aqui neste exemplo vou criar um reposit&oacute;rio 
+ chamado git-teste.</p>
+ 
+<p>At&eacute; aqui o reposit&oacute;rio foi criado no GitHub, e isso &eacute; importante pois agora temos um endereço no servidor para
+ onde vamos enviar os arquivos criados localmente. Agora &eacute; a hora de criar um diret&oacute;rio local e iniciar o Git
+ fazendo ele se comunicar com o servidor. </p>
+ <p>Para isso fazemos</p>
+•	 cria o diret&oacute;rio
+•	 mkdir git-teste
+•	 entra
+•	 cd git-teste
+•	 inicia o git
+•	 git init
+<p>O comando git init serve para "iniciar" o rastreamento de arquivos pelo Git.</p>
+<p> Esse comando cria um diret&oacute;rio (oculto).</p>
+<p>git, contendo as configurações necess&aacute;rias para o funcionamento do sistema.
+ Esse comando só &eacute; 
+ necess&aacute;rio uma vez.</p>
+<p>Para informar o Git que este diret&oacute;rio deve se comunicar com o servidor do GitHub criado acima fazemos
+•	git remote add origin git@github.com:fernandomayer/git-teste.</p>
+<p>git O comando git remote add serve para adicionar um repositório "remoto", que por padr&atilde;o o Git chama de origin,
+ e que nada mais &eacute; do que um "atalho" para o endereço do servidor.</p>
+<p> Note que neste caso estamos usando um 
+ endereço no formato do SSH, mas poderia ser tamb&eacute;m o endereço https.</p>
+<p>Nesse ponto podemos utilizar o comando git status para verificar o que est&aacute; contecendo no reposit&oacute;rio</p>
+•	 git status 
+•	On branch master
+•	Initial commit
+<p>nothing to commit (create/copy files and use "git add" to track)
+Duas coisas chamam a aten&ccedil;&atilde;o: o Git est&aacute; mostrando que estamos em um branch (ramo) chamado master,
+ e que n&atilde;o h&aacute; 
+nada para ser enviado ou adicionado ao reposit&oacute;rio (commit).</p>
+<p> Um branch &eacute; como uma "linha de desenvolvimento",
+ sendo 
+que sempre deve existir uma principal (que por padr&atilde;o &eacute; chamada de master), mas podem existir muitas outras.</p>
+ <p>Por enquanto
+ vamos trabalhar apenas com o branch principal.</p>
+<h5>Criando e rastreando arquivos</h5>
+<p>Para começar a usar o Git precisamos criar arquivos. </p>
+<p>No GitHub, um arquivo chamdo README serve para identificar
+ um projeto e aparece automaticamente na p&aacute;gina principal do reposit&oacute;rio.</p>
+ <p>Por isso, vamos criar esse arquivo 
+ (usando um editor de texto qualquer) e adicionar algum texto como
+Reposit&oacute;rio criado para testes com o GitHub.</p>
+<p>Depois de salvar o arquivo podemos ver novamente o status</p>
+•	 git status 
+•	 On branch master
+•	 Initial commit
+•	Untracked files:
+•	   (use "git add <file>..." to include in what will be committed)
+•	  README
+<p>nothing added to commit but untracked files present (use "git add" to track)
+Agora vemos que o Git automaticamente identificou que existe um arquivo criado no reposit&oacute;rio, mas ele ainda 
+n&atilde;o est&aacute; sendo rastreado.</p> 
+<p>Se quisermos que o Git rastreie todas as modifica&ccedil;&otilde;es de um arquivo
+ temos que adicioná-lo 
+ao reposit&oacute;rio com o comando git add</p>
+•	git add README
+<p>E o status ir&aacute; mostrar que o arquivo foi adicionado, mas ainda n&atilde;o foi enviado para o reposit&oacute;rio local</p>
+•	 git status 
+•	 On branch master
+•	 Initial commit
+•	Changes to be committed:
+•	   (use "git rm --cached <file>..." to unstage)
+•	   new file:   README
+<p>Nesse momento, o arquivo est&aacute; em uma staging area, ou um lugar pronto para ser enviado ao reposit&oacute;rio local. </p>
+<p>At&eacute; aqui o arquivo n&atilde;o faz parte do reposit&oacute;rio do Git! Para isso temos que "enviá-lo", ou fazer um 
+commit</p>
+•	git commit -m 'coment&aacute;rio'
+[master (root-commit) 1490ab0] primeiro commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README
+•	 git status 
+•	 On branch master
+<p>nothing to commit (working directory clean)
+Repare que a flag -m serve para adicionar um coment&aacute;rio sobre o commit que voc&ecirc; est&aacute; fazendo.</p>
+<p> Adicionar 
+um coment&aacute;rio
+ &eacute; obrigat&oacute;rio para todos os commits.</p> 
+ <p>Se voc&ecirc; n&atilde;o usar o -m, o editor de texto padr&atilde;o do 
+ seu sistema (ou aquele 
+ configurado inicialmente com core.</p>
+<p> editor, ver a etapa de configuraç&atilde;o) ir&aacute; abrir para que voc&ecirc; entre com uma mensagem.</p>
+<p>Alternativamente, podemos adicionar o arquivo (git add) e fazer o commit (git commit) em apenas uma etapa, usando a 
+op&ccedil;&atilde;o -a no commit</p>
+•	git commit -a -m 'coment&aacute;rio'
+<p>Dessa forma o arquivo &eacute; indexado diretamente, sem passar pela staging area. A vantagem &eacute; que elimina um comando.</p>
+ <p>A desvantagem &eacute; que n&atilde;o existe mais a chance de reverter um arquivo (unstage) antes de comitar.</p>
+<p>Agora que o arquivo foi comitado, ele faz parte do reposit&oacute;rio do Git, mas apenas localmente.</p>
+<p> Para envi&aacute;-lo ao 
+servidor remoto (já configurado), usamos o comando git push com dois argumentos.</p>
+<p> O primeiro indica o servidor remoto 
+(origin), e o segundo o branch (master)</p>
+•	git push origin master 
+
+
 </body>	
 </html>

@@ -178,8 +178,13 @@ Sistemas de controle de versão local</p>
 
 <p>Quando existe a necessidade de colaboração de um grupo de pessoas sobre um conjunto de arquivos, os SCV locais passam a não atender. Para resolver esse problema, sistemas de controle de versão centralizados (SCVC) foram desenvolvidos. Tais sistemas, como CVS, SVN e Perforce, têm um único servidor que contém todos os arquivos versionados e um número de usuários que realizam checkout (isto é, copiam a última versão do arquivo) de um local central (Figura 3.2-1).</p>
 
+<img src="img4.jpg"/>
 
+<p>Essa configuração oferece uma séria de vantagens, especialmente sobre os SCV locais. Por exemplo, todos os usuários sabem, até certo ponto, o que outros usuários do mesmo projeto estão fazendo. Os administradores possuem um controle refinado sobre quem pode fazer o quê, o que torna a administração destes repositórios muito mais simples do que lidar com bancos de dados locais em cada cliente. No entanto, esta mesma configuração também tem algumas desvantagens sérias. O mais óbvio é o único ponto de falha que o servidor centralizado representa. Se esse servidor cair por uma hora, durante aquela hora ninguém poderá colaborar ou até mesmo salvar as alterações realizadas nos arquivos em que estavam trabalhando. Se o disco rígido do servidor central for corrompido, e nenhum backup tenha sido realizado, todos os dados guardados serão perdidos – todo o histórico do projeto, exceto alguns arquivos que estiverem guardados nos computadores clientes. SCV locais sofrem do mesmo problema – sempre que o histórico for guardado em um único lugar, corre-se o risco de perder tudo.</p>
 
+<h3>Sistemas de controle de versão distribuído</h3>
+
+<p>É no problema do único ponto de falha que os Sistemas de Controle de Versão Distribuídos entram em cena. Em tais sistemas como Git, Mercurial, Bazaar ou Dracs, os clientes possuem um espelho completo do conteúdo do servidor, em vez de uma única versão do arquivo. Assim, se o servidor ficar corrompido, qualquer usuário do sistema pode restaurar completamente o histórico de modificações do projeto, evitando que os dados sejam perdidos. Nesses sistemas, cada checkout é uma cópia completa do conteúdo do servidor. (Figura 3.3-1)</p>
 
 
 

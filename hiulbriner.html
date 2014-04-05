@@ -88,6 +88,38 @@ Z &nbsp &nbsp &nbsp &nbsp Número menor de versão, modificado sempre que libera
 Versões de banco de dados
 </p>
 
+<p>Os dumps de bancos de dados seguirão a nomenclatura da versão a que estão vinculadas, acrescido de descritor de seu conteúdo, quando necessário.</p>
+
+<H4>Exemplos:</H4>
+
+<ul>
+  <li> pjedb_1.0.1_treinamento.backup</li>
+    <li>pjedb_1.0.1_treinamentobin.backup</li>
+    <li>pjedb_1.0.1_limpa.backup</li>
+    <li>pjedb_1.0.1_limpabin.backup</li>
+    <li>pjedb_1.2.0_limpa.backup</li>
+</ul>
+
+<p>No caso de scripts de bancos de dados, deverá ser seguida a seguinte regra de nomenclatura:
+<ul>
+<li>pjescript_importacao_<,versaodestino,>_<,descricao>.sql</li>
+<l1>pjescript_conversao_<,vorigem>-<,vdestino>_descricao.sql</l1>
+</ul>
+,onde a descrição é opcional.</p>
+
+        Exemplos: • pjescript_importacao_1.0.1_cep.sql • pjescript_conversao_1.0.1-1.0.1.sql • pjescript_importacao_1.0.1_cnae.sql
+        Repositórios distribuídos
+
+        O GIT tem sido amplamente adotado em projetos de código e desenvolvimento abertos por permitir a coordenação de várias equipes de desenvolvimento de forma simples e transparente.
+        A Figura 5.2-1 apresenta uma organização de repositórios distribuídos com três papéis distintos. A disposição é formada por um repositório central (CNJ Abençoado), sob responsabilidade dos líderes do projeto, e repositórios locais para cada equipe participante do desenvolvimento.
+        Cada um dos repositórios locais tem uma equipe formada por desenvolvedores, revisores de código e um ou mais gestores. O processo de desenvolvimento estende fluxo definido em Fluxo de trabalho, acrescentando os seguintes passos:
+
+        Os desenvolvedores resolvem issues e submetem as alterações nos repositórios locais através de branches específicos e solicitações de merge
+        Os revisores testam e aprovam as solicitações, reintegrando os branches ao master
+        Uma vez revisado, testado e aprovado, o gestor do repositório local submete a alteração para o repositório central e aguarda aprovação dos gestores do projeto.
+
+        Essa disposição traz duas vantagens em relação aos SCVs centralizados: (i) as equipes de locais de desenvolvimento têm total liberdade de organização; (ii) os líderes do projeto possuem total controle sobre o código submetido.
+        FIGURA 5.2-1
 
 &nbsp
 

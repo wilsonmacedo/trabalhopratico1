@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61cc9fd4-fd8c-4fec-a809-029447259981" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hiulbriner.html" afterPath="$PROJECT_DIR$/hiulbriner.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="trabalhopratico1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +28,7 @@
       <file leaf-file-name="hiulbriner.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hiulbriner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="3" selection-start="11875" selection-end="11875" vertical-scroll-proportion="0.55597013" vertical-offset="3221" max-vertical-offset="3961">
+            <state line="170" column="5" selection-start="12348" selection-end="12348" vertical-scroll-proportion="0.58768654" vertical-offset="3374" max-vertical-offset="3961">
               <folding />
             </state>
           </provider>
@@ -163,7 +163,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/hiulbriner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="3" selection-start="11875" selection-end="11875" vertical-scroll-proportion="0.55597013" vertical-offset="3221" max-vertical-offset="3961">
+        <state line="170" column="5" selection-start="12348" selection-end="12348" vertical-scroll-proportion="0.58768654" vertical-offset="3374" max-vertical-offset="3961">
           <folding />
         </state>
       </provider>

@@ -66,7 +66,30 @@ Quando a nova versão está prestes a ser lançada, é realizado um merge entre 
 FIGURA 5.1-1
 <img src="img1.jpg" width="700px" height="300px" />
 
+    <h3>Nomes das versões do sistema</h3>
+
+    <p>As versões intermediárias do sistema receberão o nome de município brasileiro iniciado na letra de referência da versão, estas na ordem alfabética, que não contenha espaços ou caracteres especiais, obtidos a partir do nome das unidades federativas, essas na ordem alfabética inversa. Assim, por exemplo, temos:</p>
+    Versão 	Letra de referência 	Unidade Federativa 	Município existente na letra de referência<br>
+    1.0 	A 	Tocantins 	Alvorada<br>
+    1.1 	B 	Sergipe 	Balbinos<br>
+    1.2 	C 	São Paulo 	Capela<br>
+    1.4 	D 	Santa Catarina 	Descanso<br>
+    2.0 	E 	Roraima 	Esmeralda<br>
+    Versões de bibliotecas ou projetos utilitários do sistema<br>
+
+<p>As bibliotecas ou projetos utilitários do sistema receberão sua numeração seguindo as seguintes regras:</p>
+
+X.Y.Z<br><br>
+
+<p>, onde:<br>
+X &nbsp &nbsp &nbsp &nbsp Número principal da versão, a ser alterada quando:a) opcionalmente, os desenvolvedores incluíram na versão substanciais alterações que melhoram as funcionalidades existentes; b) obrigatoriamente, quando a nova versão não é compatível, em nível de interface, com a versão de produção atual. A compatibilidade em nível de interface existe quando, substituída uma versão por outra em um projeto que somente faz uso das interfaces públicas da biblioteca, não há erro de compilação. Esse número deve ser 0 para a versão anterior à primeira.<br>
+Y &nbsp &nbsp &nbsp &nbsp 	Número intermediário de versão, a ser alterado quando há acréscimos de funcionalidades em relação à versão anterior e não foi mantida a compatibilidade em nível de interface. Esse número deve iniciar em 0 e reiniciado quando da troca do número principal.,<br>
+Z &nbsp &nbsp &nbsp &nbsp Número menor de versão, modificado sempre que liberada versão de correção de erros ou de comportamento esperado na versão do sistema. Esse número deve iniciar em 0 e reiniciado quando da troca do número intermediário ou do número principal. Para versões intermediárias ou principais novas, antes da homologação, esse número deverá ser acrescido do milestone de liberação (M1, M2, M3 etc.) até que a versão seja homologada, quando receberá o número menor.
+Versões de banco de dados
 </p>
+
+
+&nbsp
 
 
 

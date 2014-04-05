@@ -5,30 +5,51 @@
 	<meta charset="utf-8" />
 </head>
 <body>
-Gestão de configuração
+<h1>Gestão de configuração</h1>
 
-Nesta seção serão apresentados os processos de gestão de configuração do projeto.
-Responsabilidades
+<p>Nesta seção serão apresentados os processos de gestão de configuração do projeto.</p>
 
-atualizar
-A gerência de configuração é atividade exercida por três papéis, cujas responsabilidades são descritas na tabela abaixo.
-Papel 	Responsabilidades
-Gerente de configuração ou integrador de configuração 	i. elaborar e ajustar este documento;
-ii. controlar as baselines dos produtos;
-iii. realizar a integração (merge) junto às equipes de desenvolvimento;
-iv. realizar auditorias para garantir o cumprimento das atividades de gerenciamento de configuração pelas equipes de trabalho;
-v. informar o status da configuração;
-vi. definir permissões de acesso aos repositórios;
-vii. gerar tags;
-viii. gerar branchs;
-ix. gerar builds;
-x. gerar releases.
-desenvolvedor 	i. respeitar as definições deste documento quando da elaboração ou modificação dos artefatos afetados pela gerência de configuração (itens de configuração) a ele atribuídos;
-ii. realizar a integração (merge) com a gerência de configuração;
-iii. gerar builds a pedido da gerência de configuração;
-iv. gerar releases a pedido da gerência de configuração.
+<h3>Responsabilidades</h3>
+
+<span color="red">atualizar</span>
+
+<p>A gerência de configuração é atividade exercida por três papéis, cujas responsabilidades são descritas na tabela abaixo.</p>
+
+<p>Papel<br>
+Responsabilidades<br>
+Gerente de configuração ou integrador de configuração<br>
+i. elaborar e ajustar este documento;<br>
+i. elaborar e ajustar este documento;<br>
+ii. controlar as baselines dos produtos;<br>
+iii. realizar a integração (merge) junto às equipes de desenvolvimento;<br>
+iv. realizar auditorias para garantir o cumprimento das atividades de gerenciamento de configuração pelas equipes de trabalho;<br>
+v. informar o status da configuração;<br>
+vi. definir permissões de acesso aos repositórios;<br>
+vii. gerar tags;<br>
+viii. gerar branchs;<br>
+ix. gerar builds;<br>
+x. gerar releases
+desenvolvedor 	i. respeitar as definições deste documento quando da elaboração ou modificação dos artefatos afetados pela gerência de configuração (itens de configuração) a ele atribuídos;<br>
+ii. realizar a integração (merge) com a gerência de configuração;<br>
+iii. gerar builds a pedido da gerência de configuração;<br>
+iv. gerar releases a pedido da gerência de configuração
 Analista de sistema 	i. respeitar as definições deste documento quando da elaboração ou modificação dos artefatos afetados pela gerência de configuração (itens de configuração) a ele atribuídos.
-Versionamento
+</p>
+
+<h3>Versionamento</h3>
+
+<p>Os documentos relacionados ao projeto PJe são mantidos nesta wiki, no testlink e no Redmine. O versionamento adotado para os documentos será o disponível nas ferramentas citadas. Os códigos fontes, assim como artefatos de banco de dados, são mantidos no GIT. Seguem direcionamentos a respeito do versionamento dos artefatos.
+Regras de Versionamento</p>
+
+<p>O esquema de numeração de versões adotado pelo CNJ é baseado no esquema adotado pela organização Apache Foundation. O esquema define que uma versão é composta por quatro números inteiros, MAJOR.MINOR.MICRO.PATCH onde:
+</p>
+
+<h3>MAJOR<h3>
+<p>Número principal da versão, somente alterado quando:
+a)há modificação de arquitetura do sistema, ainda que não tenha havido modificação da estrutura de dados;
+b)há modificação da estrutura de dados que demanda uma migração significativa de uma base para outra base de dados, não sendo suficiente a mera concretização de scripts de migração de dados entre tabelas de um mesmo banco de dados.
+Esse número deve ser 0 para a versão anterior à primeira.
+</p>
 
 </body>
 
